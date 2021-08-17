@@ -11,6 +11,14 @@
     <link href="/compras/css/bootstrap.min.css" rel="stylesheet">
     <script src="/compras/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
+    <style>
+      body{
+        display:block;
+      }
+      a{
+       padding-left: 5px; 
+      }
+    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,17 +31,17 @@
   <div class="mb-3 p-3" id="clientes">
     <?php
       include "connexion.php";
-
+      
       $nome = $_POST['nome'];
 
       $sql = "INSERT INTO `clientes`(`nome`) VALUES ('$nome')";
-
       if(mysqli_query($connect, $sql)){
         echo "$nome cadastrado com sucesso";
       }else{
         echo "$nome não foi cadastrado";
       }
     ?>
+    <a href="index.php">voltar</a>
   </div>
 </body>
 </html>

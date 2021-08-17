@@ -11,6 +11,7 @@
     <link href="/compras/css/bootstrap.min.css" rel="stylesheet">
     <script src="/compras/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,10 +32,6 @@
             <a class="nav-link active" aria-current="page" href="#">Pedidos</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -43,7 +40,7 @@
     <label for="nome">Nome</label>
     <input type="text" name="nome" class="form-control"placeholder="Coloque o nome">
    </div>
-   <input type="submit" class="btn btn-primary">Submit</button>
+   <input type="submit" class="btn btn-primary">
   </form>
 </body>
 </html>
