@@ -22,9 +22,17 @@
   </nav>
   <div class="mb-3 p-3" id="clientes">
     <?php
+      include "connexion.php";
+
       $nome = $_POST['nome'];
 
-      $sql = "INSERT INTO `clientes`(`nome`) VALUES ('[value-1]')";
+      $sql = "INSERT INTO `clientes`(`nome`) VALUES ('$nome')";
+
+      if(mysqli_query($connect, $sql)){
+        echo "$nome cadastrado com sucesso";
+      }else{
+        echo "$nome não foi cadastrado";
+      }
     ?>
   </div>
 </body>

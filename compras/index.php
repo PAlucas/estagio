@@ -38,9 +38,12 @@
       </div>
     </div>
   </nav>
-  <div class="mb-3 p-3" id="clientes">
-    <label for="exampleFormControlInput1" class="form-label">Cadastro Cliente</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Lucas Perlatto Lotti Garcia">
-  </div>
+  <form class="p-5" action="clientes_script.php" method="POST">
+   <div class="form-group" >
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" class="form-control"placeholder="Coloque o nome">
+   </div>
+   <input type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </body>
 </html>
