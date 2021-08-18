@@ -23,18 +23,21 @@
     
     $sql = "SELECT * FROM pedidos WHERE produto LIKE '%$pesquisa%'" ;
     $sql1 = "SELECT * FROM pedidos WHERE pessoa LIKE '%$pesquisa%'" ;
-
-    function foo ($sql,$sql1)
+    $dados_aux = mysqli_query($con, $sql);
+    $linha_aux = mysqli_fetch_assoc($dados_aux);
+    $produto_aux = $linha_aux['produto'];
+    
+    function foo ($sql,$sql1,$produto_aux)//Pesquisar pelo nome ou pelo produto
     {
-    echo 'sqlpesquisa';
-    if($sql){
-        echo "";
+    if($produto_aux != ""){
+        echo "oi";
         return $sql;
     }else{
+        echo "oi2";
         return $sql1;
     }}
 
-    $dados = mysqli_query($con, foo($sql,$sql1));
+    $dados = mysqli_query($con, foo($sql,$sql1,$produto_aux));
     ?>
 
 
