@@ -35,7 +35,7 @@
       $produto = $_POST['produto'];
 
       $sql = "INSERT INTO `produtos`(`produto`) VALUES ('$produto')";
-      if(mysqli_query($connect, $sql)){
+      if(mysqli_query($conn, $sql)){
         echo "$produto cadastrado com sucesso";
       }else{
         echo "$produto não foi cadastrado";

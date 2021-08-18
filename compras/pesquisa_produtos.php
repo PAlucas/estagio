@@ -22,13 +22,13 @@
 
     $sql = "SELECT * FROM produtos WHERE produto LIKE '%$pesquisa%'";
 
-    $dados = mysqli_query($connect, $sql);
+    $dados = mysqli_query($conn, $sql);
     ?>
 
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand">Pesquisa Clientes</a>
+      <a class="navbar-brand" href="index.php">Pesquisa Clientes</a>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         </ul>
@@ -49,8 +49,8 @@
   <tbody>
     <?php   
         while($linha = mysqli_fetch_assoc($dados)){
-            $cod_pessoa = $linha['cod_produto'];
-            $nome = $linha['produto'];
+            $cod_produto = $linha['cod_produto'];
+            $produto = $linha['produto'];
             echo "<tr>
             <th scope='col'>$cod_produto</th>
             <th scope='col'>$produto</th>

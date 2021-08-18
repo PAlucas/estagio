@@ -28,7 +28,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand">Pesquisa Clientes</a>
+      <a class="navbar-brand" href="index.php">Pesquisa Produtos</a>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         </ul>
