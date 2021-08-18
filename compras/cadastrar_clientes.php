@@ -14,49 +14,33 @@
 
 </head>
 <body>
-    <?php
-    
-    $pesquisa = $_POST['busca'] ?? '';
-
-    include "connexion.php";
-
-    $sql = "SELECT * FROM clientes WHERE nome LIKE '%$pesquisa%'";
-
-    $dados = mysqli_query($connect, $sql);
-    ?>
-
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand">Pesquisa Clientes</a>
+      <a class="navbar-brand">CRUD</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> -->
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#clientes">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Pedidos</a>
+          </li>
         </ul>
-        <form class="d-flex" action="pesquisa.php" method="POST">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="busca" autofocus>
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
-  <table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Nome</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php   
-        while($linha = mysqli_fetch_assoc($dados)){
-            $cod_pessoa = $linha['cod_pessoa'];
-            $nome = $linha['nome'];
-            echo "<tr>
-            <th scope='col'>$cod_pessoa</th>
-            <th scope='col'>$nome</th>
-                  </tr>";
-        }
-    ?>
-  </tbody>
-</table>
-</body>  
+  <form class="p-5" action="clientes_script.php" method="POST">
+   <div class="form-group" >
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" class="form-control"placeholder="Coloque o nome">
+   </div>
+   <input type="submit" class="btn btn-primary">
+  </form>
+</body>
+</html>
