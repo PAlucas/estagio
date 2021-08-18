@@ -11,23 +11,37 @@
     <link href="/compras/css/bootstrap.min.css" rel="stylesheet">
     <script src="/compras/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
-
+    <style>
+      body{
+        display:block;
+      }
+      a{
+       padding-left: 5px; 
+      }
+    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">CRUD</a>
+      <a class="navbar-brand">Produto</a>
       <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> -->
       </button>
-    </div>
   </nav>
-  <form class="p-5" action="clientes_script.php" method="POST">
-   <div class="form-group" >
-    <label for="nome">Nome</label>
-    <input type="text" name="nome" class="form-control"placeholder="Coloque o nome">
-   </div>
-   <input type="submit" class="btn btn-primary">
-  </form>
+  <div class="mb-3 p-3" id="produtos">
+    <?php
+      include "connexion_produtos.php";
+      
+      $produto = $_POST['produto'];
+
+      $sql = "INSERT INTO `produtos`(`produto`) VALUES ('$produto')";
+      if(mysqli_query($connect, $sql)){
+        echo "$produto cadastrado com sucesso";
+      }else{
+        echo "$produto não foi cadastrado";
+      }
+    ?>
+    <a href="index.php">voltar</a>
+  </div>
 </body>
 </html>

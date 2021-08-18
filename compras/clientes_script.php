@@ -30,7 +30,7 @@
   </nav>
   <div class="mb-3 p-3" id="clientes">
     <?php
-      include "connexion.php";
+      include "connexion_clientes.php";
       
       $nome = $_POST['nome'];
 

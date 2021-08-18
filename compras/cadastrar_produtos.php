@@ -22,10 +22,10 @@
       </button>
     </div>
   </nav>
-  <form class="p-5" action="clientes_script.php" method="POST">
+  <form class="p-5" action="produtos_script.php" method="POST">
    <div class="form-group" >
-    <label for="nome">Nome</label>
-    <input type="text" name="nome" class="form-control"placeholder="Coloque o nome">
+    <label for="produto">Produto</label>
+    <input type="text" name="produto" class="form-control"placeholder="Coloque o produto">
    </div>
    <input type="submit" class="btn btn-primary">
   </form>
