@@ -1,4 +1,4 @@
-# estagio
+# vendas
  Programa para concorrer para vaga de estágio.
  Projeto utilizando php, bootstrap, html, css e javascript.
  Utilizei um servidor local apache e um banco de dados mysql.
